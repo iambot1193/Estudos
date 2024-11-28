@@ -1,0 +1,10 @@
+# depslib dependency file v1.0
+1725354729 source:d:\estudosemcasac\faculdade estudos em casa\main.c
+	<stdio.h>
+	<stdlib.h>
+	<unistd.h>
+
+1725353756 source:d:\estudosemcasac\faculdade estudos em casa\gerarnumeros.c
+	<stdio.h>
+	<stdlib.h>
+
