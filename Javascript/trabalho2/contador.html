@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body{
+ background: rgb(174, 174, 255);
+ font: normal 15pt Arial;
+}
+header{
+ color: white;
+ text-align: center;
+}
+section{
+ background: white;
+ border-radius: 10px;
+ padding: 15px;
+ width: 500px;
+ margin: auto;
+ text-align: center;
+ box-shadow: 5px 5px 10px rgba(99, 99, 99, 0.283);
+}
+footer{
+ color: white;
+ text-align: center;
+ font-style: italic;
+}
+
+    h1 {
+        margin-top: 225px;
+        margin-left: 500px;
+    }
+
+    h2 {
+        margin-left: 550px;
+    }
+
+    button#bt1 {
+        margin-left: 550px;
+    }
+</style>
+
+<body>
+    <h1>Contador de Cliques</h1>
+    <button id="bt1" onclick=contar()>Clique aqui!</button>
+    <button onclick=zerar()>Zerar contador</button><br>
+    <h2 id="cliques">Cliques: 0</h2>
+</body>
+<script>
+    cont = 0
+
+    function contar() {
+        cont += 1
+        contador_txt = document.getElementById("cliques").innerHTML = "Cliques: " + cont
+    }
+    function zerar() {
+        contador_txt = document.getElementById("cliques").innerHTML = "Cliques: 0"
+    }
+</script>
+
+</html>

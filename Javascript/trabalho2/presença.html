@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+ background: rgb(174, 174, 255);
+ font: normal 15pt Arial;
+}
+header{
+ color: white;
+ text-align: center;
+}
+section{
+ background: white;
+ border-radius: 10px;
+ padding: 15px;
+ width: 500px;
+ margin: auto;
+ text-align: center;
+ box-shadow: 5px 5px 10px rgba(99, 99, 99, 0.283);
+}
+footer{
+ color: white;
+ text-align: center;
+ font-style: italic;
+}
+
+        button {
+            background-color: lightgreen;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Lista de presença</h1>
+    <input type="checkbox" id="aluno1"> João <br>
+    <input type="checkbox" id="aluno2"> Maria <br>
+    <input type="checkbox" id="aluno3"> Fabiana <br>
+    <input type="checkbox" id="aluno4"> Jorge <br>
+    <input type="checkbox" id="aluno5"> Silvana <br>
+    <input type="checkbox" id="aluno6"> Luiz <br>
+    <input type="checkbox" id="aluno7"> Carlos <br>
+    <input type="checkbox" id="aluno8"> Carlos <br><br>
+    <button onclick="mostrar_presença()"> Confirmar Presença</button>
+    <p>Resultado</p>
+    <p id="presentes">Presentes: </p>
+    <p id="ausentes">Ausentes: </p>
+</body>
+<script>
+    lista_presentes = document.getElementById("presentes")
+    lista_ausentes = document.getElementById("ausentes")
+
+    
+    aluno1 = document.getElementById("aluno1")
+    aluno2 = document.getElementById("aluno2")
+    aluno3 = document.getElementById("aluno3")
+    aluno4 = document.getElementById("aluno4")
+    aluno5 = document.getElementById("aluno5")
+    aluno6 = document.getElementById("aluno6")
+    aluno7 = document.getElementById("aluno7")
+    aluno8 = document.getElementById("aluno8")
+
+
+    function mostrar_presença() {
+        lista_presentes.innerHTML = "Presentes: ";
+        lista_ausentes.innerHTML = "Ausentes: ";
+        
+
+        if (aluno1.checked) { lista_presentes.innerHTML += "João, " }
+        else { lista_ausentes.innerHTML += "João, " }
+        if (aluno2.checked) { lista_presentes.innerHTML += "Maria, " }
+        else { lista_ausentes.innerHTML += "Maria, " }
+        if (aluno3.checked) { lista_presentes.innerHTML += "Fabiana, " }
+        else { lista_ausentes.innerHTML += "Fabiana, " }
+        if (aluno4.checked) { lista_presentes.innerHTML += "Jorge, " }
+        else { lista_ausentes.innerHTML += "Jorge, " }
+        if (aluno5.checked) { lista_presentes.innerHTML += "Silvana, " }
+        else { lista_ausentes.innerHTML += "Silvana, " }
+        if (aluno6.checked) { lista_presentes.innerHTML += "Luiz, " }
+        else { lista_ausentes.innerHTML += "Luiz, " }
+        if (aluno7.checked) { lista_presentes.innerHTML += "Carlos, " }
+        else { lista_ausentes.innerHTML += "Carlos, " }
+        if (aluno8.checked) { lista_presentes.innerHTML += "Carlos, " }
+        else { lista_ausentes.innerHTML += "Carlos, " }
+
+        if (lista_presentes.innerHTML !== "Presentes: ") {
+            lista_presentes.innerHTML = lista_presentes.innerHTML.slice(0, -2)
+        }
+        if (lista_ausentes.innerHTML !== "Ausentes: ") {
+            lista_ausentes.innerHTML = lista_ausentes.innerHTML.slice(0, -2)
+        }
+
+
+
+
+    }
+
+
+
+
+</script>
+
+</html>

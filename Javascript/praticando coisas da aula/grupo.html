@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head><style>
+     body{
+ background: rgb(174, 174, 255);
+ font: normal 15pt Arial;
+}
+header{
+ color: white;
+ text-align: center;
+}
+section{
+ background: white;
+ border-radius: 10px;
+ padding: 15px;
+ width: 500px;
+ margin: auto;
+ text-align: center;
+ box-shadow: 5px 5px 10px rgba(99, 99, 99, 0.283);
+}
+footer{
+ color: white;
+ text-align: center;
+ font-style: italic;
+}
+</style>
+
+<body>
+
+</body>
+<script>
+    /*
+    turmas = [{nome: "turma[0].nome"}]
+    window.alert(turmas[0].nome)
+    */
+
+    let turma =
+        [
+            {
+                nome: "Turma A", // turma[0].nome
+                alunos: //turma[0].alunos
+                    [
+                        { nome: "Jão", idade: 15 }, //turma[0].alunos[0]
+                        { nome: "Maria", idade: 14 } //turma[0].alunos[1]
+                    ]
+            }, // turma[0]
+            {
+                nome: "Turma B",
+                alunos:
+                [
+                    {nome: "jose", idade: 99 },
+                    {nome: "adolfo", idade: 11}
+                ] 
+            }
+        ]
+
+    for (index in turma) { //para cada unidade em turma
+        turma[index].alunos.sort((b, a) => a.idade - b.idade) //organizar cada aluno por nota, do maior ao menos
+
+        for (i in turma[index].alunos) { // para cada unidade em "alunos"
+            window.alert("NOME: " + turma[index].alunos[i].nome + "\nNOTA: " + turma[index].alunos[i].idade) //mostrar nome e nota
+        }
+
+    }
+
+
+
+</script>
+
+</html>

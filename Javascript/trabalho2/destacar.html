@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+        <p>Escreva um nome e veja ele destacado na lista.</p>
+        <p>Se o nome não estiver na lista, ou não for exatamente igual, ele não será destacado.</p>
+    <input type="text" onchange="destacar()" id="nome" placeholder="digite o nome">
+    <div>
+    </div>
+    <script>
+        const lista = ["João","Márcio","Fabiana","Jorge","Silvana","Luiz","Carlos","Pablo"];
+        var body = document.body
+        for (var i = 0; i<lista.length; i++){
+            var p = document.createElement("p");
+            p.innerHTML = i+1 + ". " + lista[i];
+            p.setAttribute("name",lista[i]);
+            body.appendChild(p)
+        }
+        function destacar(){
+            var nome = document.getElementById("nome").value;
+            console.log(nome);
+            lista.forEach(i => { if ( nome === i){
+            
+            var paragrafos = document.querySelectorAll("p")
+            paragrafos.forEach( p => {
+                if (p.getAttribute("name") === nome){
+                    p.style.color = "red"
+                }
+                else{
+                    p.style.color = "black"
+                }
+            });
+            }});
+        }
+    </script>
+</body>
+</html>

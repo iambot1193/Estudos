@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+body{
+ background: rgb(174, 174, 255);
+ font: normal 15pt Arial;
+}
+header{
+ color: white;
+ text-align: center;
+}
+section{
+ background: white;
+ border-radius: 10px;
+ padding: 15px;
+ width: 500px;
+ margin: auto;
+ text-align: center;
+ box-shadow: 5px 5px 10px rgba(99, 99, 99, 0.283);
+}
+footer{
+ color: white;
+ text-align: center;
+ font-style: italic;
+}
+    body{margin-left: 500px;}
+    h1 {
+        margin-top: 100px;
+    }
+
+    h2{
+        margin-top: 10px;
+        margin-left: -120px;
+        font-size: 25px;
+    }
+</style>
+
+<body>
+    <h1>tabuada.html</h1>
+    <h2>Escreva um número e veja a tabuada dele</h2>
+    <input type="number" id="numerou" oninput="calcular()"> <!--fiz em oninput porque acho mais bonito-->
+    <p id="n1"></p>                                     <!--porém funciona dos 2 jeitos-->
+    <p id="n2"></p>
+    <p id="n3"></p>
+    <p id="n4"></p>
+    <p id="n5"></p>
+    <p id="n6"></p>
+    <p id="n7"></p>
+    <p id="n8"></p>
+    <p id="n9"></p>
+    <p id="n10"></p>
+    
+</body>
+<script>
+
+
+    
+
+    function calcular(){
+        numero = Number(document.getElementById("numerou").value)
+        for(i=1; i<=10; i++){
+        var p = document.getElementById("n"+i)
+        p.innerText = numero*i;
+    }
+
+    }
+
+</script>
+
+</html>

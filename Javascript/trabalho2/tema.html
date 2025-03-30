@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+body{
+ font: normal 15pt Arial;
+}
+header{
+ color: white;
+ text-align: center;
+}
+section{
+ background: white;
+ border-radius: 10px;
+ padding: 15px;
+ width: 500px;
+ margin: auto;
+ text-align: center;
+ box-shadow: 5px 5px 10px rgba(99, 99, 99, 0.283);
+}
+footer{
+ color: white;
+ text-align: center;
+ font-style: italic;
+}
+
+
+    h1 {
+        margin-top: 225px;
+        margin-left: 500px;
+    }
+
+    button {
+        margin-left: 600px;
+    }
+</style>
+
+<body>
+    <h1>Modo Claro/Escuro</h1><br>
+    <button onclick=mudaCor()>Mudar Tema</button>
+</body>
+<script>
+    cor = 1
+    function mudaCor() {
+        if (cor == 1) {
+            document.body.style.backgroundColor = "black";
+            document.body.style.color = "white"
+            cor = 2
+        } else {
+            document.body.style.backgroundColor = "white";
+            document.body.style.color = "black"
+            cor = 1
+        }
+    }
+</script>
+
+</html>
